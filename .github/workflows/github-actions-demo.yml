@@ -12,7 +12,10 @@ jobs:
 
           docker build -t mustafa-test-blzor
           #run image
-          docker run -d mustafa-test-blzor
+          docker run -d \
+           -p 9875:8080 \
+           --name mustafa-test-blzor \
+            mustafa-test-blzor
 
           echo "make it end"
       
